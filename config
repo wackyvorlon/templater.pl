@@ -1,0 +1,6 @@
+template: /home/drakej/socr/clockworks/main.tpl
+template_assets: /home/drakej/socr/clockworks/
+
+outputpath: /home/drakej/socr/html/
+inputpath: /home/drakej/socr/markdown/
+
