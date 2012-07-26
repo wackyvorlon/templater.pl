@@ -47,9 +47,9 @@ for ($tplcontents) {
 $name = $ARGV[0];
 $name =~ s/.md//;
 
-for ($tplcontents) {
-    s/documentid/$name/ge;
-}
+
+# Insert documentid into template if requested.
+$tplcontents =~ s/documentid/$name/;
 
 
 
