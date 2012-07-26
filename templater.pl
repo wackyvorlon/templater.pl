@@ -44,6 +44,15 @@ for ($tplcontents) {
     s/include (.*)/frobulate($1) /ge;
 }
 
+$name = $ARGV[0];
+$name =~ s/.md//;
+
+for ($tplcontents) {
+    s/documentid/$name/ge;
+}
+
+
+
 
 # Process markdown.
 $html = markdown($input);
