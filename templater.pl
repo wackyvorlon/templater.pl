@@ -44,8 +44,6 @@ for ($tplcontents) {
     s/include (.*)/frobulate($1) /ge;
 }
 
-#$contents = markdown($tplcontents);
-
 
 # Process markdown.
 $html = markdown($input);
@@ -53,7 +51,6 @@ $html = markdown($input);
 # Insert HTML into template.
 $tplcontents =~ s/HERE/$html/;
 
-#print $contents;
 
 #Dump to disk.
 $fname = $ARGV[0];
@@ -72,13 +69,12 @@ templater.pl - Processes markdown templates for SOCR.
 
 =head1 SYNOPSIS
 
-templater.pl [options] args
+templater.pl file
 
-      -opt --long      Option description
 
 =head1 DESCRIPTION
 
-Takes a template and processes it. include directive causes loading of named file.
+Takes a template and processes it. include directive causes loading of named file. Markdown filename is placed on command line.
 
 =head1 AUTHOR
 
